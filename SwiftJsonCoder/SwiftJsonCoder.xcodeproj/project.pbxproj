@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C97979982003115400F2B18C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97979972003115400F2B18C /* AppDelegate.swift */; };
-		C979799A2003115400F2B18C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97979992003115400F2B18C /* ViewController.swift */; };
 		C979799D2003115400F2B18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C979799B2003115400F2B18C /* Main.storyboard */; };
 		C979799F2003115400F2B18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C979799E2003115400F2B18C /* Assets.xcassets */; };
 		C97979A22003115400F2B18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97979A02003115400F2B18C /* LaunchScreen.storyboard */; };
 		C97979AD2003115400F2B18C /* SwiftJsonCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97979AC2003115400F2B18C /* SwiftJsonCoderTests.swift */; };
 		C97979B82003115400F2B18C /* SwiftJsonCoderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97979B72003115400F2B18C /* SwiftJsonCoderUITests.swift */; };
+		C97979C72003133200F2B18C /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97979C52003133100F2B18C /* ExampleViewController.swift */; };
+		C97979C82003133200F2B18C /* SwiftJsonCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97979C62003133100F2B18C /* SwiftJsonCoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		C97979942003115400F2B18C /* SwiftJsonCoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftJsonCoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97979972003115400F2B18C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C97979992003115400F2B18C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C979799C2003115400F2B18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C979799E2003115400F2B18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C97979A12003115400F2B18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		C97979B32003115400F2B18C /* SwiftJsonCoderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftJsonCoderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97979B72003115400F2B18C /* SwiftJsonCoderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJsonCoderUITests.swift; sourceTree = "<group>"; };
 		C97979B92003115400F2B18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97979C52003133100F2B18C /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		C97979C62003133100F2B18C /* SwiftJsonCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftJsonCoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				C97979972003115400F2B18C /* AppDelegate.swift */,
-				C97979992003115400F2B18C /* ViewController.swift */,
+				C97979C52003133100F2B18C /* ExampleViewController.swift */,
+				C97979C62003133100F2B18C /* SwiftJsonCoder.swift */,
 				C979799B2003115400F2B18C /* Main.storyboard */,
 				C979799E2003115400F2B18C /* Assets.xcassets */,
 				C97979A02003115400F2B18C /* LaunchScreen.storyboard */,
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C979799A2003115400F2B18C /* ViewController.swift in Sources */,
 				C97979982003115400F2B18C /* AppDelegate.swift in Sources */,
+				C97979C72003133200F2B18C /* ExampleViewController.swift in Sources */,
+				C97979C82003133200F2B18C /* SwiftJsonCoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

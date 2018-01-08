@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SwiftJsonCoder
 //
-//  Created by 来高强 on 2018/1/8.
+//  Created by Ligo on 2018/1/8.
 //  Copyright © 2018年 Ligo. All rights reserved.
 //
 
