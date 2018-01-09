@@ -17,6 +17,7 @@ class SwiftJsonCoder {
     private init()
     {
         self.encoder = JSONEncoder()
+        self.encoder.outputFormatting = .prettyPrinted
         self.decoder = JSONDecoder()
     }
     
