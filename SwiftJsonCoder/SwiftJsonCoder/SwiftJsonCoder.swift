@@ -21,13 +21,11 @@ class SwiftJsonCoder {
         self.decoder = JSONDecoder()
     }
     
-    
     /// to reset single inatance SwiftJsonParser's properties
     func reset()
     {
         
     }
-    
     
     /// convert the  <T: Any> object to String
     /// - Parameter object: any class conforms 'Encodable' or 'Codable' and  struct conforms 'Encodable' or 'Codable'
@@ -41,7 +39,6 @@ class SwiftJsonCoder {
         return encounterEncodeFailKey
     }
     
-    
     /// convert the  <T: Any> object to Data
     ///
     /// - Parameter object: any class conforms 'Encodable' or 'Codable' and  struct conforms 'Encodable' or 'Codable'
@@ -51,76 +48,58 @@ class SwiftJsonCoder {
         return try? self.encoder.encode(object)
     }
     
-    
-    /// convert the jsonData to the <T> object
+    /// convert the jsonObject to the <T> object
     ///
     /// - Parameters:
-    ///   - jsonData: the given Data must be a valid jsonData
+    ///   - jsonObject: can be 'Data','String','Dictionary<String,Any>' ,and only these three type
     ///   - objectType: Any conform 'Decodable' or 'Codable'
     /// - Returns: Returns <T> object or nil
-    func object<T>(fromJsonData jsonData: Data!, objectType: T.Type) -> T? where T : Decodable
+    func object<T>(fromJsonObject jsonObject: Any!, objectType: T.Type) -> T? where T : Decodable
     {
-        let obj = try? self.decoder.decode(T.self, from: jsonData)
-        return obj
-    }
-    
-    /// convert the jsonStr to the <T> object
-    ///
-    /// - Parameters:
-    ///   - jsonStr: the given String must be a valid json
-    ///   - objectType: Any conform 'Decodable' or 'Codable'
-    /// - Returns: Returns <T> object or nil
-    func object<T>(fromJsonString jsonString: String!, objectType: T.Type) -> T? where T : Decodable
-    {
-        return self.object(fromJsonData: jsonString.data(using: String.Encoding.utf8)!, objectType: objectType)
-    }
-    
-    ///   convert the dictionary to the <T> object
-    ///
-    /// - Parameters:
-    ///   - dictionary: the given dictionary must be a valid json object, The dictionary must have the following properties
-    ///     - All value are NSString, NSNumber, NSArray, NSDictionary, or NSNull
-    ///     - All keys are NSStrings
-    ///     - NSNumbers are not NaN or infinity
-    ///   - objectType: Any conforms 'Decodable' or 'Codable'
-    /// - Returns: Returns <T> object or nil
-    func object<T>(fromDictionary dictionary: Dictionary<String,Any>!, objectType: T.Type) -> T? where T : Decodable
-    {
-        guard JSONSerialization.isValidJSONObject(dictionary) else {
-            return nil
+        if jsonObject is Data {
+            return try? self.decoder.decode(T.self, from: jsonObject as! Data)
         }
-        let jsonData = try? JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
-        if jsonData != nil {
-            let obj = try? self.decoder.decode(T.self, from: jsonData!)
-            return obj
+        else if jsonObject is String
+        {
+            if let data = (jsonObject as! String).data(using: .utf8)
+            {
+                return try? self.decoder.decode(T.self, from: data)
+            }
+        }
+        else if jsonObject is Dictionary<String,Any>
+        {
+            let dictionary = jsonObject as! Dictionary<String,Any>
+            guard JSONSerialization.isValidJSONObject(dictionary) else {
+                return nil
+            }
+            if let data = try? JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+            {
+                return try? self.decoder.decode(T.self, from: data)
+            }
         }
         return nil
     }
     
-    
-    
     /// convert the given jsonData to the collectionTypes<T>. eg: Dictionary,Array
     ///
     /// - Parameters:
-    ///   - jsonData: the given Data must be a valid jsonData
+    ///   - jsonObject: can be 'Data','String' ,and only these two type
     ///   - objectType: collectionTypes conform 'Decodable' or 'Codable'
     /// - Returns: the expected collectionType or nil
-    func collectionType<T>(fromJsonData jsonData: Data!, objectType: T.Type) -> T? where T : Decodable
+    func collectionType<T>(fromJsonObject jsonObject: Any!, objectType: T.Type) -> T? where T : Decodable
     {
-        return try? JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as! T
+        if jsonObject is Data
+        {
+            return try? JSONSerialization.jsonObject(with: jsonObject as! Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! T
+        }
+        else if jsonObject is String
+        {
+            if let data = (jsonObject as! String).data(using: .utf8)
+            {
+                return try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! T
+            }
+            
+        }
+        return nil
     }
-    
-    
-    
-    /// convert the given jsonString to the collectionTypes<T>. eg: Dictionary,Array
-    ///
-    /// - Parameters:
-    ///   - jsonString: the given String must be a valid json
-    ///   - objectType: collectionTypes conform 'Decodable' or 'Codable'
-    /// - Returns: the expected collectionType or nil
-    func collectionType<T>(fromJsonString jsonString: String!, objectType: T.Type) -> T? where T : Decodable
-    {
-        return self.collectionType(fromJsonData: jsonString.data(using: String.Encoding.utf8), objectType: objectType)
-    }
-    
 }
