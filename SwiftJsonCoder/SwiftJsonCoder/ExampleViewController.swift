@@ -81,7 +81,7 @@ class ExampleViewController: UIViewController {
         super.viewDidLoad()
         
         //jsonString to custom object
-        let jsonStringToPeople = SwiftJsonCoder.shared.object(fromJsonString: peopleJsonStr, objectType: People.self)
+        let jsonStringToPeople = SwiftJsonCoder.shared.object(fromJsonObject: peopleJsonStr, objectType: People.self)
         if jsonStringToPeople != nil {
             print("jsonStringToPeople:\npeopleName: \(jsonStringToPeople?.peopleName ?? "--")\nage: \(jsonStringToPeople?.age ?? 0)")
             if jsonStringToPeople?.houses != nil
@@ -100,12 +100,12 @@ class ExampleViewController: UIViewController {
         
         
         //jsonString to collection(Dictionary)
-        let dic = SwiftJsonCoder.shared.collectionType(fromJsonString: peopleJsonStr, objectType: Dictionary<String,Any>.self)
+        let dic = SwiftJsonCoder.shared.collectionType(fromJsonObject: peopleJsonStr, objectType: Dictionary<String,Any>.self)
         if dic != nil {
             print("\njsonStringToDictionary:\n\(dic!)")
             
             //Dictionary to custom object
-            let dictionaryToPeople = SwiftJsonCoder.shared.object(fromDictionary: dic, objectType: People.self)
+            let dictionaryToPeople = SwiftJsonCoder.shared.object(fromJsonObject: dic, objectType: People.self)
             if dictionaryToPeople != nil {
                 print("\nDictionaryToPeople:\npeopleName: \(dictionaryToPeople?.peopleName ?? "--")\nage: \(dictionaryToPeople?.age ?? 0)")
                 if dictionaryToPeople?.houses != nil
@@ -119,7 +119,7 @@ class ExampleViewController: UIViewController {
         }
         
         //jsonString(Array) to custom object Array
-        let jsonStringToPeopleArray = SwiftJsonCoder.shared.object(fromJsonString: peopleArrayJsonStr, objectType: [People].self)
+        let jsonStringToPeopleArray = SwiftJsonCoder.shared.object(fromJsonObject: peopleArrayJsonStr, objectType: [People].self)
         if jsonStringToPeopleArray != nil && !(jsonStringToPeopleArray?.isEmpty)! {
             print("\n\n\njsonStringToPeopleArray:")
             for peo in jsonStringToPeopleArray!
