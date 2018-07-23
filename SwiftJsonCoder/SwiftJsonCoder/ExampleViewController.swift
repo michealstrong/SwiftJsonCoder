@@ -98,7 +98,7 @@ class ExampleViewController: UIViewController {
             print("\npeopleToJsonString:\n\(objectToJsonString)\n")
         }
         
-        
+        /*
         //jsonString to collection(Dictionary)
         let dic = SwiftJsonCoder.shared.collectionType(fromJsonObject: peopleJsonStr, objectType: Dictionary<String,Any>.self)
         if dic != nil {
@@ -117,7 +117,7 @@ class ExampleViewController: UIViewController {
                 }
             }
         }
-        
+        */
         //jsonString(Array) to custom object Array
         let jsonStringToPeopleArray = SwiftJsonCoder.shared.object(fromJsonObject: peopleArrayJsonStr, objectType: [People].self)
         if jsonStringToPeopleArray != nil && !(jsonStringToPeopleArray?.isEmpty)! {
