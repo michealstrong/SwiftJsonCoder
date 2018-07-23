@@ -12,10 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var mainNav: CustomNavigationViewController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let mainWindow: UIWindow! = UIWindow()
+        self.window = mainWindow
+        let homeVC = HomeViewController.init(nibName: "HomeViewController", bundle: nil)
+        let nav = CustomNavigationViewController(rootViewController: homeVC)
+        mainWindow.rootViewController = nav
+        self.mainNav = nav
+        mainWindow.makeKeyAndVisible()
         return true
     }
 

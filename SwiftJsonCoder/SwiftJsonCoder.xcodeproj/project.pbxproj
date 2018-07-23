@@ -15,6 +15,9 @@
 		C97979B82003115400F2B18C /* SwiftJsonCoderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97979B72003115400F2B18C /* SwiftJsonCoderUITests.swift */; };
 		C97979C72003133200F2B18C /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97979C52003133100F2B18C /* ExampleViewController.swift */; };
 		C97979C82003133200F2B18C /* SwiftJsonCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97979C62003133100F2B18C /* SwiftJsonCoder.swift */; };
+		C9C8A90B2106072200424CB6 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8A90A2106072200424CB6 /* CustomNavigationViewController.swift */; };
+		C9C8A90E210607B600424CB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8A90C210607B600424CB6 /* HomeViewController.swift */; };
+		C9C8A90F210607B600424CB6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C8A90D210607B600424CB6 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		C97979B92003115400F2B18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97979C52003133100F2B18C /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		C97979C62003133100F2B18C /* SwiftJsonCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftJsonCoder.swift; sourceTree = "<group>"; };
+		C9C8A90A2106072200424CB6 /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
+		C9C8A90C210607B600424CB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C9C8A90D210607B600424CB6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				C979799E2003115400F2B18C /* Assets.xcassets */,
 				C97979A02003115400F2B18C /* LaunchScreen.storyboard */,
 				C97979A32003115400F2B18C /* Info.plist */,
+				C9C8A90A2106072200424CB6 /* CustomNavigationViewController.swift */,
+				C9C8A90C210607B600424CB6 /* HomeViewController.swift */,
+				C9C8A90D210607B600424CB6 /* HomeViewController.xib */,
 			);
 			path = SwiftJsonCoder;
 			sourceTree = "<group>";
@@ -238,6 +247,7 @@
 				C97979A22003115400F2B18C /* LaunchScreen.storyboard in Resources */,
 				C979799F2003115400F2B18C /* Assets.xcassets in Resources */,
 				C979799D2003115400F2B18C /* Main.storyboard in Resources */,
+				C9C8A90F210607B600424CB6 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C8A90E210607B600424CB6 /* HomeViewController.swift in Sources */,
 				C97979982003115400F2B18C /* AppDelegate.swift in Sources */,
+				C9C8A90B2106072200424CB6 /* CustomNavigationViewController.swift in Sources */,
 				C97979C72003133200F2B18C /* ExampleViewController.swift in Sources */,
 				C97979C82003133200F2B18C /* SwiftJsonCoder.swift in Sources */,
 			);
