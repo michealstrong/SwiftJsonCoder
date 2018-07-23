@@ -12,7 +12,10 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let label = UILabel.init(frame: CGRect.init(x: 100, y: 100, width: 100, height: 100))
+        label.backgroundColor = UIColor.red
+        label.text = "123"
+        self.view.addSubview(label)
         // Do any additional setup after loading the view.
     }
 
