@@ -35,12 +35,10 @@ class HomeViewController: UIViewController {
         }
         tmp.backgroundColor = UIColor.gray
         superView.addSubview(tmp)
-        print("Create")
+        
         return tmp
     }
 
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
