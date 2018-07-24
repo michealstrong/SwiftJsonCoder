@@ -44,6 +44,11 @@ class HomeViewController: UIViewController {
         print("function1")
     }
     
+    func addXAndY(_ x: Int!, _ y: Int!) -> Int
+    {
+        return (x + y)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
