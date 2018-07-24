@@ -26,6 +26,25 @@ class HomeViewController: UIViewController {
         
     }
 
+    
+    func createView(addTo superView: UIView!, _ frame: CGRect?) -> UIView?
+    {
+        
+        let tmp = UIView.init()
+        if let rect = frame {
+            tmp.frame = rect
+        }
+        tmp.backgroundColor = UIColor.gray
+        superView.addSubview(tmp)
+        
+        return tmp
+    }
+    
+    func function1()
+    {
+        print("function1")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
