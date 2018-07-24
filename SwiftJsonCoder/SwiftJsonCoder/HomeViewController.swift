@@ -17,6 +17,9 @@ class HomeViewController: UIViewController {
         label.text = "123"
         self.view.addSubview(label)
         // Do any additional setup after loading the view.
+        print("故意的")
+        print("故意的")
+        print("故意的")
     }
 
     override func didReceiveMemoryWarning() {
