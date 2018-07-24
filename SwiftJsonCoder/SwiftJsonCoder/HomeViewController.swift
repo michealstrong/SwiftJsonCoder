@@ -23,7 +23,6 @@ class HomeViewController: UIViewController {
         button.setTitle("button", for: .normal)
         self.view.addSubview(button)
         print("注释")
-        print("再加个注释")
         
     }
 
