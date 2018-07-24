@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
     {
         print("function1")
     }
-    
+
     func addXAndY(_ x: Int!, _ y: Int!) -> Int
     {
         return (x + y)
