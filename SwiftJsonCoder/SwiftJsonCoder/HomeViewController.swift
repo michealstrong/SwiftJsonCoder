@@ -25,6 +25,19 @@ class HomeViewController: UIViewController {
         print("注释")
         
     }
+    
+    func createView(addTo superView: UIView!, _ frame: CGRect?) -> UIView?
+    {
+        
+        let tmp = UIView.init()
+        if let rect = frame {
+            tmp.frame = rect
+        }
+        tmp.backgroundColor = UIColor.gray
+        superView.addSubview(tmp)
+        
+        return tmp
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
