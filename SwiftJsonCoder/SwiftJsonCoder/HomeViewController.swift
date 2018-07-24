@@ -17,6 +17,14 @@ class HomeViewController: UIViewController {
         label.text = "123"
         self.view.addSubview(label)
         // Do any additional setup after loading the view.
+        let button = UIButton.init(type: .custom)
+        button.frame = CGRect.init(x: 100, y: 300, width: 80, height: 80)
+        button.backgroundColor = UIColor.green
+        button.setTitle("button", for: .normal)
+        self.view.addSubview(button)
+        print("注释")
+        print("再加个注释")
+        
     }
 
     override func didReceiveMemoryWarning() {
