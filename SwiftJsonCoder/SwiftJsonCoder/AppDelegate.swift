@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainWindow.rootViewController = nav
         self.mainNav = nav
         mainWindow.makeKeyAndVisible()
+        print("didFinishLaunchingWithOptions")
         return true
     }
 
