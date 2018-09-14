@@ -141,7 +141,9 @@ class ExampleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func tmpFunc() {
+        print("tmpFunc")
+    }
     /*
     // MARK: - Navigation
 
