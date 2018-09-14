@@ -55,7 +55,9 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func lai() {
+        print("lai")
+    }
     /*
     // MARK: - Navigation
 
