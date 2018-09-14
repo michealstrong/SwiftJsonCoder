@@ -62,6 +62,10 @@ class HomeViewController: UIViewController {
     func laiGao() {
         print("laiGao")
     }
+    
+    func laiGaoQiang() {
+        print("laiGaoQiang")
+    }
     /*
     // MARK: - Navigation
 
